@@ -7,8 +7,8 @@ import { useInterval } from '../utils'
 
 const Counter = ({ count, dispatch, firingComponent }) => {
   useInterval(() => {
-    dispatch({ type: 'COUNTER_FIRING' })
-  }, 3000)
+    dispatch({ type: 'SIBLING_FIRING' })
+  }, 1000)
 
   let conditionalBg
   let arrowDirection

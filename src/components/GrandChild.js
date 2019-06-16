@@ -4,12 +4,8 @@ import { connect } from 'react-redux'
 import GreatGrandChild from './GreatGrandChild'
 
 const GrandChild = ({ count, firingComponent }) => {
-  const siblingFiring = firingComponent === 'sibling'
-  const blinker = count % 2 === 0 || siblingFiring
-
-  const direction = firingComponent === 'greatGrandChild' ? 'up' : 'down'
-  const arrowDirection = `fas fa-arrow-alt-circle-${direction}`
-  const arrowStyle = { visibility: blinker ? 'hidden' : 'visible' }
+  const arrowDirection = `fas fa-arrow-alt-circle-${firingComponent === 'greatGrandChild' ? 'up' : 'down'}`
+  const arrowStyle = { visibility: count % 2 === 0 || firingComponent === 'sibling' ? 'hidden' : 'visible' }
 
   return (
     <div className="grandChild">

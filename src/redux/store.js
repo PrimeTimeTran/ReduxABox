@@ -1,11 +1,11 @@
 import { createStore } from 'redux'
 
-const counterInitialState = {
+const initialState = {
   count: 0,
   firingComponent: null
 }
 
-const counter = (state = counterInitialState, action) => {
+const counter = (state = initialState, action) => {
   switch(action.type) {
     case 'COUNTER_FIRING':
       return {

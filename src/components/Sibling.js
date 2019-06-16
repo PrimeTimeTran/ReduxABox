@@ -1,19 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Sibling = (props) => {
-  const increment = () => props.dispatch({ type: 'SIBLING_FIRING' })
-  const origin = props.firingComponent === 'sibling'
-  let color
+const Sibling = ({ count, dispatch, firingComponent }) => {
+  const origin = firingComponent === 'sibling'
+  let siblingStyle
   if (origin) {
-    color = '#508AA8'
+    siblingStyle = { backgroundColor: '#508AA8' }
   }
 
   return (
-    <div className="sibling" style={{ backgroundColor: color }}>
+    <div className="sibling" style={siblingStyle}>
       <h3>Sibling</h3>
-      <span className="number">{props.count}</span>
-      <button onClick={increment}>
+      <span className="number">{count}</span>
+      <button onClick={() => dispatch({ type: 'SIBLING_FIRING' })}>
         Increment
       </button>
     </div>

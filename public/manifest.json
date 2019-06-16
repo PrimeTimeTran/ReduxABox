@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ReduxABox",
+  "name": "A counter app which uses React, functional components, Redux, and useState.",
   "icons": [
     {
       "src": "favicon.ico",
