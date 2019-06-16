@@ -1,33 +1,116 @@
+body { 
+  background-color: #160507;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 95%;
+  width: 93vw;
+  margin: 10px;
   display: flex;
-  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  border-radius: 20px;
   align-items: center;
+  border: 3px solid #AA4465;
+  background-color: #160507;
+  justify-content: space-around
+}
+
+.sibling {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 3px solid #AA4465;
+  background-color: #160507;
+}
+
+.counter {
+  width: 40%;
+  height: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #AA4465;
+  background-color: #160507;
+}
+
+.counterChildren {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.child {
+  width: 80%;
+  height: 570px;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #AA4465;
+  background-color: #271514;
+}
+
+.grandChild {
+  width: 80%;
+  height: 420px;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #AA4465;
+  background-color: #292524;
+}
+
+.greatGrandChild {
+  width: 80%;
+  height: 260px;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #AA4465;
+  background-color: #2B3031;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #244F26;
+}
+
+.icon-big {
+  margin: 5;
+  font-size: 100;
+}
+
+.number {
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 80px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.img {
+  margin-top: 10px;
+}
+h3 {
+  color: white;
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  margin-top: 5px;
+  font-size: 20px;
 }

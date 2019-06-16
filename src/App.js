@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Provider, connect } from 'react-redux'
 
-function App() {
+import './App.css'
+import store from './redux/store'
+
+import Sibling from './components/Sibling'
+import Counter from './components/Counter'
+
+const App = ({ count, firingComponent }) => {
+
+  const blinker = count % 2 === 0
+  const direction = firingComponent === 'sibling' ? 'right' : 'left'
+  const arrowDirection = `fas fa-arrow-alt-circle-${direction}`
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sibling />
+      <div className="icon icon-big" style={{ visibility: blinker ? 'hidden' : 'visible' }}>
+        <i className={arrowDirection} />
+      </div>
+      <Counter />
     </div>
-  );
+  )
 }
 
-export default App;
+const mapStateToProps = state => ({ ...state })
+
+const ConnectWrappedAppComponent = connect(mapStateToProps)(App)
+
+const ProviderWrappedConnectWrappedAppComponent = () => {
+  return (
+    <Provider store={store}>
+      <ConnectWrappedAppComponent />
+    </Provider>
+  )
+}
+
+export default ProviderWrappedConnectWrappedAppComponent
