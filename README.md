@@ -1,5 +1,8 @@
 # [CoderSchool FTW](http://www.coderschool.vn/)
 
+## [Video tutorial](https://youtu.be/x2E9sG-bKlc)
+
+[![React, Redux, & ReduxABox ](https://i.imgur.com/WOR8s85.png)](https://youtu.be/x2E9sG-bKlc "React, Redux, & ReduxABox ")
 Created with love by: Loi Tran
 
 ## [Try it out here](http://reduxabox.netlify.com)
@@ -18,9 +21,7 @@ After we encountered these problems, we explored different solutions using Redux
 - Have a central source of truth regarding the state of our application
 - Refactored our components to all be stateless, making them easier to reason about and understand
 
-## [Video tutorial](https://youtu.be/x2E9sG-bKlc)
 
-[![React, Redux, & ReduxABox ](https://i.imgur.com/WOR8s85.png)](https://youtu.be/x2E9sG-bKlc "React, Redux, & ReduxABox ")
 
 ## License
 
