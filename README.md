@@ -4,16 +4,18 @@ Created with love by: Loi Tran
 
 ## [Try it out here](http://reduxabox.netlify.com)
   
-A fun box app using fundamental elements of ES6, React, & Redux. In the course of building this we took several different approaches in terms of architecture and styling. This process gave us a greater understanding of the different problems we encounter.
+A fun box app using fundamental elements of [ES6](https://www.w3schools.com/js/js_es6.asp), [React](https://reactjs.org/), & [Redux](https://redux.js.org/). 
+
+In the course of building this we took several different approaches in terms of architecture and styling. This process gave us a greater appreciation of the problems which arise when many React components care about the same piece of state within an application.
 
 - Nesting components deeply leads to problems such as [prop drilling](https://codeburst.io/react-anti-pattern-prop-drilling-54474d5236bd)
 - Prop drilling makes our components brittle to refactoring
 - Leaving state in multiple component is difficult to reason about
 
-In conjunction, we discovered some of the reasons why [Redux](https://redux.js.org/) can be useful. We also tested a new API from React called [hooks](https://reactjs.org/docs/hooks-intro.html). These things allowed us to accomplish the following
+After we encountered these problems, we explored different solutions using Redux. We also experimented with a new API from React called [hooks](https://reactjs.org/docs/hooks-intro.html). These things allowed us to accomplish the following
 
-- Helps us to get data where we need it without the need for prop drilling
-- Implemented a central source of truth regarding the state of our application, the store
+- Get data where it's needed without the bloat of prop drilling
+- Have a central source of truth regarding the state of our application
 - Refactored our components to all be stateless, making them easier to reason about and understand
 
 ## [Video tutorial](https://youtu.be/x2E9sG-bKlc)
