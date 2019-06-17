@@ -1,19 +1,24 @@
 # [CoderSchool FTW](http://www.coderschool.vn/)
 
 Created with love by: Loi Tran
+
+## [Try it out here](http://reduxabox.netlify.com)
   
 A fun box app using fundamental elements of ES6, React, & Redux. In the course of building this we took several different approaches in terms of architecture and styling. This process gave us a greater understanding of the different problems we encounter.
 
-## Try it out
-Demo online at [this link.](http://reduxabox.netlify.com)
+- Nesting components deeply leads to problems such as [prop drilling](https://codeburst.io/react-anti-pattern-prop-drilling-54474d5236bd)
+- Prop drilling makes our components brittle to refactoring
+- Leaving state in multiple component is difficult to reason about
 
-## Video Walkthrough
+In conjunction, we discovered some of the reasons why [Redux](https://redux.js.org/) can be useful. We also tested a new API from React called [hooks](https://reactjs.org/docs/hooks-intro.html). These things allowed us to accomplish the following
 
-[Demo](https://youtu.be/x2E9sG-bKlc)
+- Helps us to get data where we need it without the need for prop drilling
+- Implemented a central source of truth regarding the state of our application, the store
+- Refactored our components to all be stateless, making them easier to reason about and understand
 
-## User Stories
+## [Video tutorial](https://youtu.be/x2E9sG-bKlc)
 
-[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+[![React, Redux, & ReduxABox ](https://i.imgur.com/WOR8s85.png)](https://youtu.be/x2E9sG-bKlc "React, Redux, & ReduxABox ")
 
 ## License
 
