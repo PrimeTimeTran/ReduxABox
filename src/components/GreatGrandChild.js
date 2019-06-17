@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const GreatGrandChild = ({ count, dispatch, firingComponent }) => {
-
   let bgStyle
   if (firingComponent === 'greatGrandChild') {
     bgStyle = { backgroundColor: '#508AA8' }

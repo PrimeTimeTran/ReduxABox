@@ -11,18 +11,16 @@ const Counter = ({ count, dispatch, firingComponent }) => {
   }, 1000)
 
   let conditionalBg
-  let arrowDirection
+  let arrowDirection = 'fas fa-arrow-alt-circle-'
 
   if (firingComponent === 'counter') {
     conditionalBg = { backgroundColor: '#508AA8' }
-    arrowDirection = 'fas fa-arrow-alt-circle-down'
+    arrowDirection += 'down'
   } else {
-    arrowDirection = 'fas fa-arrow-alt-circle-up'
+    arrowDirection += 'up'
   }
 
-  const siblingFiring = firingComponent === 'sibling'
-  const blinker = count % 2 === 0 || siblingFiring
-  const arrowStyle = { opacity: blinker ? 0 : 1 }
+  const arrowStyle = { opacity: count % 2 === 0 || firingComponent === 'sibling' ? 0 : 1 }
 
   return (
     <div className="counter" style={conditionalBg}>
