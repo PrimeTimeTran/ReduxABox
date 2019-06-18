@@ -22,12 +22,38 @@ After we encountered these problems, we explored different solutions using Redux
 - Identify expectations on our state through initial state in our store definition
 - Have a central source of truth regarding the state of our application, our store
 - Refactored our components to all be stateless, making them easier to reason about and understand
+- Used hooks to remove component level state entirely
 
 ## Questions or Comments?
-Feel free to make a pull request on solutions you think might be better and why. Specifically, would this be a good idea?
+Feel free to make a pull request on solutions you think might be better and why. Specifically, 
+
+1. Why is passing props to components with this component a good or bad idea?
 
 ```javascript
 const mapStateToProps = state => ({ ...state })
+```
+2. Could we come up with a better way to use hooks in `./src/components/counter` than `useInterval`?
+
+```javascript
+import { useEffect, useRef } from 'react'
+
+export const useInterval = (callback, delay) => {
+  const savedCallback = useRef()
+
+  useEffect(() => {
+    savedCallback.current = callback
+  }, [callback])
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current()
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay)
+      return () => clearInterval(id)
+    }
+  }, [delay])
+}
 ```
 
 ## License
